@@ -1,0 +1,196 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #ffeaf3);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #5a2940;
+}
+
+.screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.hidden {
+    display: none;
+}
+
+.card {
+    width: 100%;
+    max-width: 550px;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 40px 30px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(150, 50, 100, 0.18);
+    border: 3px solid #ffffff;
+}
+
+.emoji {
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+.topEmoji {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.bigEmoji {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #e75480;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #d94875;
+    margin: 25px 0;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #8b526a;
+    margin-bottom: 25px;
+}
+
+.messageBox {
+    background: #fff0f6;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 25px 0;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.messageBox p {
+    margin-bottom: 12px;
+}
+
+.messageBox p:last-child {
+    margin-bottom: 0;
+}
+
+.love {
+    font-size: 25px;
+    font-weight: bold;
+    color: #e75480;
+}
+
+.progress {
+    width: 100%;
+    height: 20px;
+    background: #ffd9e8;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 25px 0;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff6f9c, #e75480);
+    border-radius: 20px;
+    transition: width 0.2s;
+}
+
+button {
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    background: #e75480;
+    color: white;
+    box-shadow: 0 8px 20px rgba(231, 84, 128, 0.25);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.buttons {
+    position: relative;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.yesButton {
+    background: #e75480;
+}
+
+.noButton {
+    background: #555;
+}
+
+.finalCard {
+    position: relative;
+}
+
+.smallText {
+    margin-top: 25px;
+    color: #a66b82;
+    font-size: 14px;
+}
+
+.heart {
+    position: fixed;
+    font-size: 30px;
+    animation: floatUp 3s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .messageBox {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 13px 20px;
+    }
+}
